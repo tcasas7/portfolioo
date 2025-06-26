@@ -215,7 +215,7 @@ const projects: Project[] = [
       "https://github.com/tcasas7/viandas-Back"
     ],
     moreContent: {
-      video: "/videos/Viandas del Sur.mp4",
+      video: "https://drive.google.com/file/d/1cv7BdcI2qwsoDUUcS3_xsLaJo-5zIr5R/view?usp=sharing",
       pdf: "/pdf/VDS-English.pdf"
     }
   },
@@ -228,7 +228,7 @@ const projects: Project[] = [
       "https://github.com/tcasas7/NYD-tokens"
     ],
     moreContent: {
-      video: "/videos/NYD token fans.mp4",
+      video: "https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750972144/wshapkdjplnbfsx6tgre.mp4",
       pdf: "/pdf/Fan-Token-Web-App-Full-Prototype.pdf"
     }
   },
@@ -240,7 +240,7 @@ const projects: Project[] = [
       "https://github.com/tcasas7/properties-proyect"
     ],
     moreContent: {
-      video: "/videos/Properties.mp4",
+      video: "https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750972241/xxcvk0xtock6jaohfekx.mp4",
       pdf: "/pdf/Vacation-Rental-Platform.pdf"
     }
   }
@@ -347,8 +347,50 @@ const FeaturedProjects = () => {
                   </a>
                 </>
               )}
+              {modalProject.title === "Logistics management system" ? (
+                <>
+                  <a
+                    href={modalProject.moreContent?.video}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      color: theme.colors.accent,
+                      textDecoration: 'underline',
+                      marginTop: '2rem',
+                      marginBottom: '2rem',
+                      fontWeight: '500',
+                      fontSize: '16px'
+                    }}
+                  >
+                    View desktop version on Google Drive
+                  </a>
 
-              {modalProject.moreContent?.video && (
+                  <h4
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      color: theme.colors.accent,
+                      marginTop: '2rem',
+                      marginBottom: '1rem',
+                      fontWeight: '500'
+                    }}
+                  >
+                    Mobile version
+                  </h4>
+                  <video
+                    controls
+                    width="100%"
+                    style={{ borderRadius: '8px', marginBottom: '1rem' }}
+                  >
+                    <source
+                      src="https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750972922/wgktr7gidgta7gr3nscb.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </>
+              ) : modalProject.moreContent?.video && (
                 <video
                   controls
                   width="100%"
@@ -357,24 +399,6 @@ const FeaturedProjects = () => {
                   <source src={modalProject.moreContent.video} type="video/mp4" />
                 </video>
               )}
-            {modalProject.title === "Logistics management system" && (
-              <>
-                <h4 style={{display: 'block',
-                        textAlign: 'center',
-                        color: theme.colors.accent,
-                        textDecoration: '',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                          }}>Mobile version</h4>
-                    <video
-                      controls
-                      width="100%"
-                      style={{ borderRadius: '8px', marginBottom: '1rem' }}
-                    >
-                      <source src="/videos/VDS-mobile.mp4" type="video/mp4" />
-                    </video>
-              </>
-            )}
             </ModalContent>
              <CloseButton onClick={() => setModalProject(null)}>×</CloseButton>
           </ModalOverlay>
