@@ -240,7 +240,7 @@ const projects: Project[] = [
       "https://github.com/tcasas7/properties-proyect"
     ],
     moreContent: {
-      video: "https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750972241/xxcvk0xtock6jaohfekx.mp4",
+      video: "https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750978148/v7nqkgncphvbbeanvdfv.mp4",
       pdf: "/pdf/Vacation-Rental-Platform.pdf"
     }
   }
