@@ -7,7 +7,7 @@ const EducationSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -6rem;
+  margin-top: -5rem;
 
    @media (max-width: ${theme.breakpoints.md}) {
     padding: ${theme.spacing.xl} 0;

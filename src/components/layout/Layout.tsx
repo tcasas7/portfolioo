@@ -10,6 +10,19 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+
+
 const LayoutWrapper = styled.div`
   min-height: 100vh;
   display: flex;
@@ -190,7 +203,7 @@ useEffect(() => {
 
       <Header role="banner">
         <Nav role="navigation" aria-label="Main navigation">
-          <div className="container">
+          <Container>
             <Logo
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -207,7 +220,7 @@ useEffect(() => {
               <a href="#other-projects" role="listitem" aria-label="Other Projects section">Other Projects</a>
               <a href="#contact" role="listitem" aria-label="Contact section">Contact</a>
             </NavLinks>
-          </div>
+          </Container>
         </Nav>
       </Header>
 
@@ -222,9 +235,9 @@ useEffect(() => {
       </FloatingWrapper>
 
       <Footer role="contentinfo">
-        <div className="container">
+        <Container>
           <p>© {new Date().getFullYear()} Tomas Casas. All rights reserved.</p>
-        </div>
+        </Container>
       </Footer>
     </LayoutWrapper>
   );

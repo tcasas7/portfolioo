@@ -12,7 +12,7 @@ const ContactSection = styled.section`
   justify-content: center;
   color: ${theme.colors.textLight};
   padding: ${theme.spacing.lg} 0;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   @media (max-width: ${theme.breakpoints.md}) {
     padding: ${theme.spacing.xl} 0;

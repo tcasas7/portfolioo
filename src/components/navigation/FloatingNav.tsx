@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { theme } from '../../styles/theme';
 import { useEffect, useState } from 'react';
 
+
 const NavContainer = styled(motion.nav)`
   position: fixed;
   right: ${theme.spacing.xl};
