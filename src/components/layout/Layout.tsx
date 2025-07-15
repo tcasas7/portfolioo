@@ -156,6 +156,12 @@ const FloatingWrapper = styled.div`
   }
 `;
 
+const FooterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Layout = ({ children }: LayoutProps) => {
   useKeyboardNavigation();
 
@@ -235,9 +241,9 @@ useEffect(() => {
       </FloatingWrapper>
 
       <Footer role="contentinfo">
-        <Container>
+        <FooterContainer>
           <p>© {new Date().getFullYear()} Tomas Casas. All rights reserved.</p>
-        </Container>
+        </FooterContainer>
       </Footer>
     </LayoutWrapper>
   );
