@@ -239,6 +239,7 @@ const projects: Project[] = [
     githubUrls: [
       "https://github.com/tcasas7/properties-proyect"
     ],
+    liveUrl: "https://www.altos-alojamientos.com/",
     moreContent: {
       video: "https://res.cloudinary.com/dl2aaz0wy/video/upload/v1750978148/v7nqkgncphvbbeanvdfv.mp4",
       pdf: "/pdf/Vacation-Rental-Platform.pdf"
@@ -279,16 +280,17 @@ const FeaturedProjects = () => {
                   <FaGithub style={{ fontSize: '1.5rem' }} />
                 </SocialLink>
               ))}
-
                 {proj.liveUrl && (
-                  <a
+                  <SocialLink
                     href={proj.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Live Demo"
+                    whileHover={{ y: -5 }}
+                    aria-label="Visit live site"
                   >
-                    <FaExternalLinkAlt />
-                  </a>
+                    <FaExternalLinkAlt style={{ fontSize: '1.5rem' }} />
+                  </SocialLink>
                 )}
               </Links>
               {proj.moreContent && (
